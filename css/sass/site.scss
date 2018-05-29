@@ -1,0 +1,131 @@
+@import 'reset';
+@import 'variables';
+@import 'mixin';
+
+.slider-container {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	display: flex;
+	background-color: $color_karry_approx;
+}
+.sc {
+	width: 100%;
+	height: 600px;
+	background-color: $black;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	text-align: center;
+	font-size: 2rem;
+	background-position: center;
+	background-size: 100% 600px;
+	background-repeat: no-repeat;
+	.text h1 {
+		@extend %extend_1;
+	}
+}
+.sc-1 {
+	display: flex;
+	background-image: $url_0;
+}
+.sgc-1 {
+	background-image: $url_0;
+}
+.sc-2 {
+	background-image: $url_1;
+	display: none;
+}
+.sgc-2 {
+	background-image: $url_1;
+}
+.sc-3 {
+	background-image: $url_2;
+	display: none;
+}
+.sgc-3 {
+	background-image: $url_2;
+}
+.sc-4 {
+	background-image: $url_3;
+	display: none;
+}
+.sgc-4 {
+	background-image: $url_3;
+}
+.sgc {
+	display: flex;
+	flex: 1;
+	height: 200px;
+	text-align: center;
+	flex-flow: column;
+	justify-content: center;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 200px;
+	&.active {
+		border-bottom: 5px solid $red;
+	}
+	.text h1 {
+		@extend %extend_1;
+		font-size: 1.75rem;
+		font-weight: 100;
+	}
+    @include atSmall() {
+        height: 100px;
+		.text h1 {
+			font-size: .75rem;
+			font-weight: 100;
+			padding: 3px 4px;
+			border: 2px solid $white;
+		}
+    }
+    @include atMedium() {
+        height: 135px;
+		.text h1 {
+			font-size: .75rem;
+			font-weight: 100;
+			padding: 3px 4px;
+			border: 2px solid $white;
+		}
+    }
+}
+.text {
+	color: $white;
+}
+.previous {
+	@extend %extend_2;
+}
+.next {
+	@extend %extend_2;
+	right: 0;
+}
+.prev-icon {
+	@extend %extend_3;
+}
+.next-icon {
+	@extend %extend_3;
+}
+.slider-gallery {
+	height: auto;
+	background-color: $color_iron_approx;
+	.wrapper {
+		width: 100%;
+		height: auto;
+		margin: auto;
+        @include atSmall {
+            width: 100%;
+        }
+	}
+    
+}
+.sg-progressbar {
+	width: 0;
+	height: 5px;
+	background-color: $red;
+}
+.sg-container {
+	opacity: .7;
+	display: flex;
+	justify-content: center;
+}

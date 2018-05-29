@@ -1,0 +1,43 @@
+//colors
+$white:  white;
+$color_karry_approx: antiquewhite;
+$black: black;
+$color_iron_approx: #d8d8d8;
+$red: #ff0000;
+
+//urls
+$url_0: url(../images/red.jpg);
+$url_1: url(../images/blue.jpg);
+$url_2: url(../images/green.jpg);
+$url_3: url(../images/purple.jpg);
+
+//@extend-elements
+//original selectors
+//.sc .text h1, .sgc .text h1
+%extend_1 {
+	display: table;
+	margin: auto;
+	padding: 10px 20px;
+	border: 5px solid $white;
+}
+
+//original selectors
+//.previous, .next
+%extend_2 {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	position: absolute;
+	top: 288px;
+	transform: translateY(-50%);
+	opacity: .5;
+}
+
+//original selectors
+//.prev-icon, .next-icon
+%extend_3 {
+	padding: 20px;
+	background-color: $white;
+	color: $black;
+	cursor: pointer;
+}
