@@ -3,54 +3,57 @@
 @import 'mixin';
 
 .slider-container {
-	width: 100%;
-	height: auto;
-	overflow: hidden;
-	display: flex;
-	background-color: $color_karry_approx;
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    overflow: hidden;
 }
-.sc {
-	width: 100%;
-	height: 600px;
-	background-color: $black;
-	display: flex;
-	flex-flow: column;
-	justify-content: center;
-	text-align: center;
-	font-size: 2rem;
-	background-position: center;
-	background-size: 100% 600px;
-	background-repeat: no-repeat;
-	.text h1 {
+
+.slide {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    transition: transform 1.76s ease;
+    opacity: 0;
+    .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .text h1 {
 		@extend %extend_1;
 	}
 }
-.sc-1 {
-	display: flex;
+
+.slide0{
+	opacity: 1;
 	background-image: $url_0;
+}
+.sgc-0 {
+	background-image: $url_0;
+}
+.slide1 {
+	background-image: $url_1;
+	transform: translate3d(0,0,0);
 }
 .sgc-1 {
-	background-image: $url_0;
-}
-.sc-2 {
 	background-image: $url_1;
-	display: none;
+}
+.slide2 {
+	background-image: $url_2;
+	transform: translate3d(0,0,0);
 }
 .sgc-2 {
-	background-image: $url_1;
-}
-.sc-3 {
 	background-image: $url_2;
-	display: none;
+}
+.slide3 {
+	background-image: $url_3;
+	transform: translate3d(0,0,0);
 }
 .sgc-3 {
-	background-image: $url_2;
-}
-.sc-4 {
-	background-image: $url_3;
-	display: none;
-}
-.sgc-4 {
 	background-image: $url_3;
 }
 .sgc {
@@ -113,6 +116,7 @@
 		width: 100%;
 		height: auto;
 		margin: auto;
+        padding-top: 600px;
         @include atSmall {
             width: 100%;
         }

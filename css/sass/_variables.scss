@@ -28,9 +28,10 @@ $url_3: url(../images/purple.jpg);
 	flex-flow: column;
 	justify-content: center;
 	position: absolute;
-	top: 288px;
+	top: 300px;
 	transform: translateY(-50%);
 	opacity: .5;
+    z-index: 10;
 }
 
 //original selectors
