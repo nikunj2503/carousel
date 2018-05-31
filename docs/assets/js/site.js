@@ -35,12 +35,15 @@ document.addEventListener("DOMContentLoaded", function(){
     if(isMobile) {
         
         sliderContainer.on('swipeleft',function(e){
-            next();
+            var currentSlide = retrieveCurrentSlide();
+            next(currentSlide);
         });
         
         sliderContainer.on('swiperight',function(e){
-            previous();
+            var currentSlide = retrieveCurrentSlide();
+            previous(currentSlide);
         });
+
     }
 
 });
